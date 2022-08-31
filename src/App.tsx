@@ -1,6 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
+import "./style.scss"
+
 const App = () => {
 
   const goOver9000 = () => {

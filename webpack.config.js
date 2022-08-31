@@ -10,7 +10,8 @@ module.exports = [
         test: /\.ts$/,
         include: /src/, 
         use: [{ loader: 'ts-loader' }]
-      }]
+      }
+    ]
     },
     output: {
       path: __dirname + '/dist',
@@ -27,7 +28,16 @@ module.exports = [
         test: /\.ts(x?)$/,
         include: /src/,
         use: [{ loader: 'ts-loader' }]
-      }]
+      },
+      {
+        test: /\.s?[ac]ss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
+      }
+    ]
     },
     resolve: {
       modules: [__dirname, "src", "node_modules"],
